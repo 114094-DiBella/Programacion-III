@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+   
+    <p>parrafo1</p>
+    <p>parrafo2</p>
+    <p>parrafo3</p>
+
+
+
+    <button id="fadeOut">Realizar un fadeout</button>
+    <button id="toggle">Realizar un toggle</button>
+    <button id="fadeTo">Realizar un fadeto</button>
+    <button id="fadeIn">Realizar un fadein</button>
+
+    <div id="div1" style="width: 80px; height: 80px; display: none;background-color: red;">
+    <p>este es un ejemplo fadeIn</p>
+    </div>
+
+    <div id="div2" style="width: 80px; height: 80px; display: none;background-color: blue;">
+        <p>este es un ejemplo fadeOut</p>
+        </div>
+    
+        <div id="div3" style="width: 80px; height: 80px; display: none;background-color: green;">
+            <p>este es un ejemplo fadeIn</p>
+            </div>
+            
+    <script>
+        $(document).ready(function(){
+           $("#fadeIn").click(function(){
+            $("#div1").fadeIn(),
+            $("#div2").fadeIn("slow"),
+            $("#div3").fadeIn(5000)
+           }),
+
+           $("#fadeOut").click(function(){
+            $("#div1").fadeOut(),
+            $("#div2").fadeOut("slow"),
+            $("#div3").fadeOut(5000)
+           }),
+
+           $("#toggle").click(function(){
+            $("#div1").toggle(),
+            $("#div2").toggle("slow"),
+            $("#div3").toggle(5000)
+           })
+
+           $("#fadeTo").click(function(){
+            $("#div1").fadeTo(1000,0.05),
+            $("#div2").fadeTo("slow",0.06),
+            $("#div3").fadeTo(5000,0.04)
+           })
+
+        })
+    </script>
+
+</body>
+</html>

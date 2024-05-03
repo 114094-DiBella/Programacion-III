@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <h2>Primer ejemplo Jquery</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eum sequi, odio voluptate laudantium repellat error. Atque officia voluptatem eum expedita quaerat, eligendi dolorem blanditiis corrupti praesentium molestiae. Aut, temporibus!</p>
+    <p id="segundo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, accusantium ex vero corporis similique repellendus ipsum tempore quidem qui. Obcaecati repellendus at eaque dolores rem sit ipsam, autem nobis culpa.</p>
+
+
+    <button>Ocultar</button>
+    <script>
+        $(document).ready(function(){
+            console.log("todo listo..")
+            
+        $("button").click(function(){
+            $("#segundo").hide()
+        })
+        })
+    </script>
+
+</body>
+</html>
