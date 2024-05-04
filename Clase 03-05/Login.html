@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login para equipos de futbol argentino</title>
+    <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jquery validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- script nuestro donde validamos-->
+    <script src="./scriptValidaciones.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,17 +20,24 @@
         <h2>Loguearte</h2>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-8">
-                <form id="formLoginEquipos" onsubmit="return validateForm()" >
+                <form id="formLoginEquipos"  >
                     <div class="form-group mt-3">
-                        <label for="Denominacion">Denominacion del club</label>
-                        <input type="text" name="Denominacion" id="Denominacion" class="form-control ">
+                        <label for="denominacion">Denominacion del club</label>
+                        <input type="text" name="denominacion" id="denominacion" class="form-control ">
                     </div>
                     <div class="form-group mt-3">
-                        <label for="Password">Contraseña</label>
-                        <input type="password" name="Password" id="Password" class="form-control ">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" class="form-control ">
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                        <button id="btnIniciarSesion" type="submit" class="btn btn-primary mt-3">Iniciar sesion</button>
+                        <script>
+                            $(document).ready(function(){
+                              $("#btnIniciarSesion").click(function(){
+                                $(location).attr('href','./SegundaPagina.html')
+                              })  
+                            })
+                        </script>
                     </div>
                 </form>
             </div>

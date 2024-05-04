@@ -1,17 +1,17 @@
 $(document).ready(function(){
    $("#formLoginEquipos").validate({
     rules: {
-        Denominacion: {
+        denominacion: {
             required: true
         },
-        Password: {
+        password: {
             required: true,
             
         }
         
     },
     messages: {
-        nombre: {
+        Denominacion: {
             required: "La DENOMINACION del club es obligatorio"
             
         }
