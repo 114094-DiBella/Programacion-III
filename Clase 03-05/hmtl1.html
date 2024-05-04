@@ -7,25 +7,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    
-   
-    <p>parrafo1</p>
-    <p>parrafo2</p>
-    <p>parrafo3</p>
+    <button id="btnAccion" type="button">Redirigir</button>
 
-
-
-
-    <button id="btnOcultar">Ocultar</button>
-    <button id="btnMostrar">Mostrar</button>
     <script>
-        $(document).ready(function(){
-           $("#btbOcultar").click(function({
-            $("p").hide
-           }))
-        })
+        //para redigir a otra pagina
+         $(document).ready(function(){
+            $("#btnAccion").click(function(){
+                $(location).attr('href','http://127.0.0.1:5500/hmtl2.html')
+            })
         })
     </script>
-
 </body>
 </html>

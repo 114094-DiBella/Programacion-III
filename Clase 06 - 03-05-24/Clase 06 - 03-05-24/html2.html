@@ -7,25 +7,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    
-   
-    <p>parrafo1</p>
-    <p>parrafo2</p>
-    <p>parrafo3</p>
+    <h1>PAGINA 2!!!!</h1>
 
-
-
-
-    <button id="btnOcultar">Ocultar</button>
-    <button id="btnMostrar">Mostrar</button>
     <script>
         $(document).ready(function(){
-           $("#btbOcultar").click(function({
-            $("p").hide
-           }))
-        })
+            let usuario = localStorage.getItem("usuariooo")
+
+            if(usuario){
+                alert("Hola "+usuario)
+            }
         })
     </script>
-
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>PAGINA 3!!!!</h1>
+
+    <script>
+        $(document).ready(function(){
+            let usuario = localStorage.getItem("usuario")
+
+            // if(usuario){
+            //     alert("Hola "+usuario)
+            // }
+
+            var nombre = GetParameters("nombre")
+            var apellido = GetParameters("apellido")
+
+            alert("Hola "+ nombre + " " + apellido)
+
+            function GetParameters(param){
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1)
+            .split('&')
+
+            for(var i = 0; i< url.length; i++){
+                var urlParam = url[i].split('=')
+                if(urlParam[0] == param){
+                    return urlParam[1]
+                }
+            }
+            }
+        })
+    </script>
+</body>
+</html>
