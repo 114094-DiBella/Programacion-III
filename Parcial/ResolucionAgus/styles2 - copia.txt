@@ -1,0 +1,73 @@
+/* Estilos generales */
+body {
+    background-image: url(https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714953600&semt=ais);
+    background-color: #8cb4d3; /* Fondo claro para simular un ambiente limpio y aéreo */
+    color: #1a1212; /* Texto oscuro para contraste y fácil lectura */
+    font-family: 'Arial', sans-serif; /* Fuente clara y profesional */
+    padding: 20px;
+}
+
+/* Estilos para el contenedor */
+.container {
+    max-width: 800px;
+    margin: auto; /* Centramos el contenedor */
+    background-color: white; /* Fondo blanco para el formulario */
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilos para los títulos */
+h1 {
+    color: #007BFF; /* Azul brillante para llamar la atención */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para las etiquetas de los campos de formulario */
+.form-label {
+    color: #555; /* Color medio para etiquetas */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Estilos para los campos de formulario */
+.form-control {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Borde gris */
+    margin-bottom: 10px;
+}
+
+/* Estilos para los botones */
+.btn {
+    background-color: #007BFF; /* Azul brillante */
+    color: white; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Cambios de estilo en el botón al pasar el ratón */
+.btn:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilos para el select */
+.form-select {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Borde gris */
+    margin-bottom: 10px;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Reducir el padding en dispositivos pequeños */
+    }
+}

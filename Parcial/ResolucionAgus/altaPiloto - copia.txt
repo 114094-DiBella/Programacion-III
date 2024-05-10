@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Piloto</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery Validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- Enlace al archivo de script -->
+    <script src="validationsAltaPiloto.js"></script>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="frmAltaPiloto" action="" method="post">
+            <div class="mb-4">
+                <h1>Alta de Piloto</h1>
+            </div>
+            <div class="mb-3">
+                <label for="inputNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="inputNombre" name="inputNombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputApellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="inputApellido" name="inputApellido" required>
+            </div>
+            <div class="mb-3">
+                <label for="sltNacionalidad" class="form-label">Nacionalidad</label>
+                <select class="form-select" id="sltNacionalidad" name="sltNacionalidad" required>
+                    <option value="" disabled selected>Seleccione su nacionalidad</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="sltSexo" class="form-label">Sexo</label>
+                <select class="form-select" id="sltSexo" name="sltSexo" required>
+                    <option value="" disabled selected>Seleccione su sexo</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Prefiero no aclarar">Prefiero no aclarar</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="inputCantHsVuelo" class="form-label">Cantidad de horas de vuelo</label>
+                <input type="number" class="form-control" id="inputCantHsVuelo" name="inputCantHsVuelo" required min="1">
+            </div>
+            <button type="submit" id="btnCargarPiloto" class="btn btn-primary">Cargar datos</button>
+        </form>
+    </div>
+</body>
+</html>
