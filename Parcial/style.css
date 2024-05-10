@@ -1,0 +1,8 @@
+body{
+    background-image: url(img/fondo.jpg);
+    background-size: auto;
+}
+#contenedor{
+    margin: 200px;
+    background-color: aqua;
+}

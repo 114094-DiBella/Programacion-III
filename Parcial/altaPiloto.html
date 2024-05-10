@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid bg-primary py-3" >
+        <div class="container text-white">
+            <h1 class="display-3">Alta Piloto</h1>
+            <p class="lead">Ingrese sus datos</p>
+        </div>
+    </div>
+    <div class="container py-3">
+        <form id="formAltaPiloto">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="nombrePiloto">nombre</label>
+                    <input type="text" class="form-control" name="nombrePiloto" id="nombrePiloto">
+                </div>
+                <div class="form-group col-6">
+                    <label for="apellidoPiloto">Apellido</label>
+                    <input type="text" class="form-control" name="apellidoPiloto" id="apellidoPiloto">
+                </div>                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="hsDeVuelo">Cantidad de hs de vuelo</label>
+                    <input type="number" class="form-control" name="hsDeVuelo" id="hsDeVuelo">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="radio" name="Sexo" id="Masculino">Masculino
+                    <input type="radio" name="Sexo" id="Femenino">Femenino
+                    <input type="radio" name="Sexo" id="Otro">Otro
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">                    
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <select name="nacionalidad" id="nacionalidad">
+                        <option value="0">Selecionar</option>
+                        <option value="1">Argentina</option>
+                        <option value="2">Uruguay</option>
+                        <option value="3">Chile</option>
+                    </select>
+                </div>                
+            </div>            
+            <button type="submit" class="btn btn-primary" id="save">Guardar</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
+
+    <script>       
+    $.validator.setDefaults({
+            submitHandler: function () {  
+                if(validate){
+                alert('Exito')
+                }             
+            }
+        });    
+
+        $.validator.addMethod('vacio', function(value, element, param) {
+            return !value.vacio(param)
+        });
+
+        $(document).ready(function(){
+            console.log("ready")
+            $("#formAltaPiloto").validate({
+        rules:{
+            nombrePiloto:{
+                required:true, 
+                minlength:6,               
+                vacio: "_"
+            },
+            apellidoPiloto:{
+                required:true, 
+                minlength:6,               
+                vacio: "_"
+            },
+            hsDeVuelo:{
+                required:true,                
+                vacio: "_"
+            },
+            sexo: {            
+            checked: true           
+            },
+            nacionalidad:{
+                required:true             
+            }
+        },
+        messages: {
+            nombrePiloto:{
+                required:"Ingrese un valor",
+                minlength:"minimo 6 caracteres",             
+                vacio: "Ingrese un valor"
+            },
+            apellidoPiloto:{
+                required:"Ingrese un valor",
+                minlength:6,               
+                vacio: "Ingrese un valor"
+            },
+            hsDeVuelo:{
+                required:"Ingrese un valor",             
+                vacio: "Ingrese un valor"
+            },
+            sexo: {            
+            checked: "seleccione una opcion"          
+            },
+            nacionalidad:{
+                required:"Ingrese un valor"         
+            }
+        },
+        errorElement: "small",
+        errorClass: 'text-danger'
+    });
+        })
+    </script>
+    
+</body>
+</html>
