@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor" class="container">
+    1.Explicar y diagramar la arquitectura “Cliente-Servidor”
+    <p> La arquitectura cliente-servidor es un modelo de arquitectura de software en el que un sistema se divide 
+        en dos partes principales: cliente y servidor. 
+        Este modelo es comun en servidores web, aplicaciones de red y servicios distribuidos.
+        <br>
+        El cliente envia solicitudes al servidor para obtener datos o realizar operaciones
+        El servidor responde a las solicitudes de los clientes proporcionando los datos o realizando 
+        operaciones solicitadas
+        <br>
+
+        Cliente          solicitud            Servidor <br>
+        Cpu  ------------------------------ > Google.com
+
+    </p>
+
+    2. ¿Qué es un evento javascript? Nombre algún ejemplo y desarrolle como
+    implementarlo.
+    <p>
+        Un evento javascript es una señal o notificacion que indica que algo a ocurrido en el navegador <br>
+        Esta el evento click que se utiliza para que haga una accion cuando se haga click en un elemento
+        desarrolle:
+    </p>
+    <button id="btnClick"> Click aqui</button>
+    <script>
+        const button = document.getElementById("btnClick");
+        function handleClick(){
+            alert("¡Has echo click en un boton!")
+        }
+        button.addEventListener("click",handleClick);
+    </script>
+    3.¿Cómo escribiría el estilo necesario para aplicarlo a un selector con id=
+    ”contenedor”, que tenga un color de fondo azul, el texto este centrado y tenga
+    un tamaño de fuente de 12 píxeles.
+    <style>
+        #contenedor {
+            background-color: blue;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style> 
+    4.encuentre el error y corrija:
+    <table>
+        <td>
+            <tr></tr>
+            <tr></tr>
+        </td>
+        <tr> <!-- Este es el bueno dado que tr almacena td y no viseversa-->
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div>
+    5.¿Cómo escribiría un documento que tenga 3 botones de opción (radio button)
+    de los cuales el usuario solo pueda seleccionar solo uno?
+    <label>
+        <input type="radio" name="opcion" value="1">
+        Opcion 1
+    </label>
+    <label>
+        <input type="radio" name="opcion" value="2">
+        Opcion 2
+    </label
+    <label>
+        <input type="radio" name="opcion" value="3">
+        Opcion 3
+    </label
+</div>
+</div>
+ 
+</body>
+</html>

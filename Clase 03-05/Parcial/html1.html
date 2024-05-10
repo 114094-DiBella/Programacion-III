@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- HEAD aqui se colocan elementos como titulo de pagina, scripst, metadata-->
+    <style>
+        /* Estilo aplicado por id */
+        #parrafo {
+            color: blue;
+        }
+        /* Estilo aplicado por clase */
+        .parrafo {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--BODY es el contenido visible de una pagina web-->
+    1. Describir cuál es la estructura de una página web (etiquetas). Explicar para que
+    sirve cada una.
+    <H1>Son titulos, sirven para usarse como titulos</H1>
+    <p>Son parrafos, sirven para usarse como parrafos </p>   
+    <a href=""> Enlaces</a>
+    <ul>Lista desordenas</ul>
+    <ol>Lista ordenada</ol>
+    <li>Lista de elementos</li>
+    <img src="" alt=""> Imagenes 
+    <table>tablas <tr>en filas</tr> <td>en columnas</td></table>
+    <div>son divisores</div>
+    <span>similar al div</span>
+    <script>
+       <!-- 2. Escribir script que utilizaría para obtener el value de un tag html por class. --> 
+      const element = document.querySelector('.classTag');
+      if(element){
+        const value = element.value;
+        console.log('${value}');
+      }
+      else{
+        console.log('No se encontro un elemento')
+      }
+    </script>
+    3. Escribir etiqueta html para un bóton, asignarle un evento para cuando se le
+    presiona un click, escribir script para el evento click donde se muestre un alert
+    con algún mensaje.
+    <button id="btnAlert">clickme</button>
+    <script>
+        $(document).ready(function(){
+            $("#btnAlert").click(function(){
+                alert("mensaje del boton")
+            })
+        })
+    </script>
+    4.Si a un párrafo se le setea un mismo estilo por medio de su clase, luego por su id
+    y finalmente se le aplica dicho estilo dentro de dicha etiqueta html (in line). ¿Qué
+    estilo predomina finalmente?
+    <p id="parrafo" class="parrafo" style="color: red;"> Este es un párrafo con estilos de clase, id y en línea.
+    este parrafo se muestra en rojo porque por prioridad es En linea > id > class </p>   
+    
+    5.¿Cuál es la principal diferencia entre las clases container y container-fluid de
+    bootstrap?
+    
+    La principal diferencia en container y container-fluid radica en los anchos del contenedor, container tiene hanchos maximos
+    fijados y responsivos, mientras que container-fluid ocupa todo el hancho disponible
+</body>
+</html>
